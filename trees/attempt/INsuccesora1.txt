@@ -1,0 +1,15 @@
+NODE *INS(NODE *p)
+{
+	NODE *q;
+	if(p->left!=NULL)
+	{
+		p=p->left;
+	}
+	if(p->right!=NULL)
+	{
+		q=p->right;
+		while(q!=NULL)
+			q=q->left;
+    }
+	return q;
+}
